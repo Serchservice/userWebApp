@@ -12,6 +12,10 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: "Inria Sans", sans-serif;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export default GlobalStyles;
