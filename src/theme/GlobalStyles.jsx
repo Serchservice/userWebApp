@@ -16,6 +16,24 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
   }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  button,
+  input,
+  textarea {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  button {
+    cursor: pointer;
+  }
+  
 `;
 
 export default GlobalStyles;

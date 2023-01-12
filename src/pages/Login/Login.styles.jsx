@@ -10,7 +10,6 @@ export const Main = styled.main`
   width: 100%;
   max-width: 943px;
   margin: 0 auto;
-  border: solid red 2px;
 `;
 
 export const WelcomeMessage = styled.article`

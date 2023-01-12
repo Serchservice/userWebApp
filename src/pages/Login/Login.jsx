@@ -1,5 +1,6 @@
-import Text from "../components/Text/Text";
-import Header from "../components/Header/Header";
+import Text from "../../components/Text/Text";
+import Header from "../../components/Header/Header";
+import LoginForm from "./LoginForm/LoginForm";
 import { Container, Main, WelcomeMessage } from "./Login.styles";
 
 const Login = () => {
@@ -20,6 +21,7 @@ const Login = () => {
             Good to have you back
           </Text>
         </WelcomeMessage>
+        <LoginForm />
       </Main>
     </Container>
   );
