@@ -32,6 +32,7 @@ const LoginForm = ({ register, handleSubmit, handler, errors }) => {
             {...register("email", { required: "email is required" })}
           />
         </InputWrapper>
+        <p>{errors.email?.message}</p>
       </FormField>
       <FormField>
         <Label htmlFor="password">password</Label>
