@@ -33,6 +33,10 @@ const GlobalStyles = createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  li{
+    list-style: none;
+  }
   
 `;
 

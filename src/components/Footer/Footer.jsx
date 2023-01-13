@@ -1,12 +1,20 @@
 import React from "react";
-import { FooterWrapper, FooterLink } from "./footer.styles";
+import { FooterWrapper, FooterContent, FooterLink } from "./Footer.styles";
 
 function Footer() {
   return (
     <FooterWrapper>
-      <FooterLink href="#">privacy policy</FooterLink>
-      <FooterLink href="#">accessibility policy</FooterLink>
-      <FooterLink href="#">terms and conditions</FooterLink>
+      <FooterContent>
+        <li>
+          <FooterLink to="#">privacy policy</FooterLink>
+        </li>
+        <li>
+          <FooterLink to="#">accessibility policy</FooterLink>
+        </li>
+        <li>
+          <FooterLink to="#">terms and conditions</FooterLink>
+        </li>
+      </FooterContent>
     </FooterWrapper>
   );
 }

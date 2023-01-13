@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Form = styled.form`
   width: 100%;
@@ -37,6 +38,7 @@ export const InputWrapper = styled.div`
   width: 100%;
   height: 70px;
   padding-left: 20px;
+  padding-right: 20px;
   &:focus-within {
     border-width: 3px;
   }
@@ -49,6 +51,7 @@ export const Input = styled.input`
   color: #b3b3b3;
   width: 100%;
   height: inherit;
+  font-family: "Inria Sans", sans-serif;
   &:focus {
     border-width: 3px;
   }
@@ -64,13 +67,55 @@ export const PasswordTogglerIcon = styled.button`
   align-items: center;
   justify-content: center;
   height: inherit;
-  width: 60px;
+  width: 32px;
+  z-index: 2;
 `;
 
-export const PasswordConfig = styled.div`
+export const LoginOptionsWrapper = styled.article`
   width: 100%;
   display: flex;
+  flex-direction: column;
+  gap: 73px;
+  margin-top: 40px;
+`;
+
+export const LoginOptions = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  /* margin-top: ${(props) => props.marginTop}; */
+`;
+
+export const CreateAccountWrapper = styled.div`
+  display: flex;
+  gap: 15px;
+`;
+
+export const LoginBtnWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+export const StyledLink = styled(Link)`
+  font-size: 24px;
+  font-weight: 24px;
+  line-height: 29px;
+  color: ${({ color }) => color};
+  &:visited {
+    color: ${({ color }) => color};
+  }
+`;
+
+export const LoginButton = styled.button`
+  width: 200px;
+  height: 55px;
+  font-size: 28px;
+  line-height: 34px;
+  color: #fff;
+  background: #3f0f36;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 `;
 
 /*
