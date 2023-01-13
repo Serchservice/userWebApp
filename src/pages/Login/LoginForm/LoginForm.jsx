@@ -53,6 +53,8 @@ const LoginForm = ({ register, handleSubmit, handler, errors }) => {
             {showPassword ? <EyeIconOpen /> : <EyeIconClose />}
           </PasswordTogglerIcon>
         </InputWrapper>
+        <p>{errors.password?.message}</p>
+        <p>{errors.password?.minLength}</p>
       </FormField>
       <LoginOptionsWrapper>
         <LoginOptions marginTop="40px">
