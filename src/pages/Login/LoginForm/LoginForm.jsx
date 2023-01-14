@@ -10,6 +10,8 @@ import {
   PasswordTogglerIcon,
   StyledLink,
   LoginButton,
+  ValidationMessage,
+  NewUserText,
 } from "./LoginForm.styles";
 import Checkbox from "../../../components/checkbox/Checkbox";
 import { EyeIconClose, EyeIconOpen } from "../EyeIcons/EyeIcons";
@@ -19,6 +21,22 @@ import { useState } from "react";
 const LoginForm = ({ register, handleSubmit, handler, errors }) => {
   const [showPassword, setShowPassword] = useState(false);
   const passwordInputType = showPassword ? "text" : "password";
+  const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const passWordValidation = {
+    required: "Password is required",
+    minLength: {
+      value: 8,
+      message: "Password length: 8 or more characters",
+    },
+  };
+  const emailValidation = {
+    required: "Email is required",
+    pattern: {
+      value: emailRegex,
+      message: "Email is not valid",
+    },
+  };
+  const EyeIcon = showPassword ? <EyeIconOpen /> : <EyeIconClose />;
   return (
     <Form onSubmit={handleSubmit(handler)}>
       <FormField>
@@ -29,10 +47,11 @@ const LoginForm = ({ register, handleSubmit, handler, errors }) => {
             placeholder="joe@gmail.com"
             id="email"
             autoComplete="off"
-            {...register("email", { required: "email is required" })}
+            {...register("email", emailValidation)}
           />
         </InputWrapper>
-        <p>{errors.email?.message}</p>
+        <ValidationMessage>{errors.email?.message}</ValidationMessage>
+        <ValidationMessage>{errors.email?.pattern}</ValidationMessage>
       </FormField>
       <FormField>
         <Label htmlFor="password">password</Label>
@@ -41,23 +60,20 @@ const LoginForm = ({ register, handleSubmit, handler, errors }) => {
             type={passwordInputType}
             placeholder="***************"
             id="password"
-            {...register("password", {
-              required: "password is required",
-              minLength: { value: 8, message: "minimum length is 8" },
-            })}
+            {...register("password", passWordValidation)}
           />
           <PasswordTogglerIcon
             type="button"
             onClick={() => setShowPassword(!showPassword)}
           >
-            {showPassword ? <EyeIconOpen /> : <EyeIconClose />}
+            {EyeIcon}
           </PasswordTogglerIcon>
         </InputWrapper>
-        <p>{errors.password?.message}</p>
-        <p>{errors.password?.minLength}</p>
+        <ValidationMessage>{errors.password?.message}</ValidationMessage>
+        <ValidationMessage>{errors.password?.minLength}</ValidationMessage>
       </FormField>
       <LoginOptionsWrapper>
-        <LoginOptions marginTop="40px">
+        <LoginOptions>
           <Checkbox label="Remember me" />
           <StyledLink to="#" color="#3F0F36">
             Forgot password?
@@ -65,13 +81,7 @@ const LoginForm = ({ register, handleSubmit, handler, errors }) => {
         </LoginOptions>
         <LoginOptions>
           <CreateAccountWrapper>
-            <Text
-              fontSize="28px"
-              line-height="34px"
-              color="rgba(124, 124, 124, 0.5)"
-            >
-              New user?
-            </Text>
+            <NewUserText>New user?</NewUserText>
             <StyledLink to="#" color="#6C0062">
               Create Account
             </StyledLink>

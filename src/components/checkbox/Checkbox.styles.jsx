@@ -10,6 +10,10 @@ export const Input = styled.input`
   width: 30px;
   height: 30px;
   cursor: pointer;
+  @media (max-width: 430px) {
+    width: 20px;
+    height: 20px;
+  }
   &:checked {
     background-color: yellow;
     position: relative;
@@ -24,8 +28,10 @@ export const Input = styled.input`
     background-repeat: no-repeat;
     height: 20px;
     width: 30px;
-    /* border: 3px solid green; */
-    /* top: 5px; */
+    @media (max-width: 430px) {
+      width: 20px;
+      height: 20px;
+    }
   }
 `;
 
@@ -33,17 +39,17 @@ export const Label = styled.label`
   display: flex;
   align-items: center;
 
-  font-weight: 400;
-  font-size: 24px;
-  color: #030001;
-  line-height: 29px;
-  margin-bottom: 5px;
-  text-transform: capitalize;
-
   span {
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
     margin-left: 16px;
+    text-transform: capitalize;
+    @media (max-width: 430px) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      margin-left: 7px;
+    }
   }
 `;

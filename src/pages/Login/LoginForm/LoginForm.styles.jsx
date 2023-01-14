@@ -10,6 +10,10 @@ export const Form = styled.form`
   border-radius: 10px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 59px;
+  @media (max-width: 430px) {
+    padding: 39px 15px 45px 15px;
+    margin-top: 51px;
+  }
 `;
 
 export const FormField = styled.div`
@@ -17,6 +21,9 @@ export const FormField = styled.div`
   flex-direction: column;
   width: 100%;
   margin-bottom: 20px;
+  @media (max-width: 430px) {
+    /* margin-bottom: 27px; */
+  }
 `;
 
 export const Label = styled.label`
@@ -28,6 +35,12 @@ export const Label = styled.label`
   margin-bottom: 5px;
   text-transform: capitalize;
   display: block;
+  @media (max-width: 430px) {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const InputWrapper = styled.div`
@@ -39,8 +52,13 @@ export const InputWrapper = styled.div`
   height: 70px;
   padding-left: 20px;
   padding-right: 20px;
+
   &:focus-within {
     border-width: 3px;
+  }
+
+  @media (max-width: 430px) {
+    height: 55px;
   }
 `;
 
@@ -50,8 +68,12 @@ export const Input = styled.input`
   font-weight: 400;
   color: #b3b3b3;
   width: 100%;
-  height: inherit;
+  height: 100%;
   font-family: "Inria Sans", sans-serif;
+
+  @media (max-width: 430px) {
+    font-size: 18px;
+  }
   &:focus {
     border-width: 3px;
   }
@@ -59,6 +81,10 @@ export const Input = styled.input`
     color: #b3b3b3;
     font-size: 24px;
     font-family: "Inria Sans", sans-serif;
+    @media (max-width: 480px) {
+      font-size: 18px;
+      font-weight: 300;
+    }
   }
 `;
 
@@ -77,6 +103,10 @@ export const LoginOptionsWrapper = styled.article`
   flex-direction: column;
   gap: 73px;
   margin-top: 40px;
+  @media (max-width: 480px) {
+    margin-top: 27px;
+    gap: 27px;
+  }
 `;
 
 export const LoginOptions = styled.div`
@@ -89,7 +119,11 @@ export const LoginOptions = styled.div`
 
 export const CreateAccountWrapper = styled.div`
   display: flex;
+  align-items: center;
   gap: 15px;
+  @media (max-width: 480px) {
+    gap: 8px;
+  }
 `;
 
 export const LoginBtnWrapper = styled.div`
@@ -97,11 +131,27 @@ export const LoginBtnWrapper = styled.div`
   justify-content: flex-end;
 `;
 
+export const NewUserText = styled.span`
+  font-size: 28px;
+  line-height: 34px;
+  color: rgba(124, 124, 124, 0.5);
+  @media (max-width: 480px) {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+  }
+`;
+
 export const StyledLink = styled(Link)`
   font-size: 24px;
   font-weight: 24px;
   line-height: 29px;
   color: ${({ color }) => color};
+  @media (max-width: 480px) {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
   &:visited {
     color: ${({ color }) => color};
   }
@@ -116,6 +166,26 @@ export const LoginButton = styled.button`
   background: #3f0f36;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  @media (max-width: 480px) {
+    width: min(110px, 130px);
+    height: 40px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+  }
+`;
+
+export const ValidationMessage = styled.span`
+  color: #ff0039;
+  font-size: 24px;
+  padding-left: 10px;
+  margin-top: 5px;
+  font-family: 300;
+  @media (max-width: 430px) {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+  }
 `;
 
 /*
