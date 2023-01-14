@@ -62,8 +62,6 @@ export const BackgroundWrapper = styled.div`
   width: 100%;
   padding: 0 70px;
   z-index: -3;
-  /* border: solid red 1px; */
-  /* height: min-content; */
 `;
 
 export const BackgroundSerchText = styled.span`

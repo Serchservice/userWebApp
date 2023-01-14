@@ -187,21 +187,3 @@ export const ValidationMessage = styled.span`
     line-height: 22px;
   }
 `;
-
-/*
-import React from "react";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-function App() {
-  const [checked, setChecked] = React.useState(true);
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
-  return (
-    <FormControlLabel
-      control={<Checkbox checked={checked} onChange={handleChange} />}
-      label="Check me"
-    />
-  );
-}
-*/

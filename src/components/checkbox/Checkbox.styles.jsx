@@ -15,7 +15,6 @@ export const Input = styled.input`
     height: 20px;
   }
   &:checked {
-    background-color: yellow;
     position: relative;
   }
 
@@ -29,8 +28,10 @@ export const Input = styled.input`
     height: 20px;
     width: 30px;
     @media (max-width: 430px) {
+      transform: scale(1);
+      background-position: 2px 1px;
+      height: 15px;
       width: 20px;
-      height: 20px;
     }
   }
 `;
