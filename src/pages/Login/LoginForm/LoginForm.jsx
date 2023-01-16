@@ -15,7 +15,6 @@ import {
 } from "./LoginForm.styles";
 import Checkbox from "../../../components/checkbox/Checkbox";
 import { EyeIconClose, EyeIconOpen } from "../EyeIcons/EyeIcons";
-import Text from "../../../components/Text/Text";
 import { useState } from "react";
 
 const LoginForm = ({ register, handleSubmit, handler, errors }) => {

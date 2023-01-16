@@ -7,6 +7,32 @@ export const Container = styled.div`
   grid-template-rows: 100px 1fr, 100px;
   position: relative;
   min-width: 360px;
+  ::before {
+    content: "";
+    background: url(${serchBgImage});
+    background-repeat: no-repeat;
+    background-size: 312px 100px;
+    background-position: 60px 770px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -3;
+    @media (max-width: 480px) {
+      background-size: 158px 77px;
+      background-position: 0px 770px;
+    }
+  }
+  ::after {
+    content: "";
+    background: url(${serchBgImage});
+    background-repeat: no-repeat;
+    background-size: 312px 100px;
+    background-position: 1015px 770px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -3;
+  }
 `;
 
 export const Main = styled.main`
@@ -14,6 +40,17 @@ export const Main = styled.main`
   max-width: 943px;
   margin: 0 auto;
   position: relative;
+  ::before {
+    content: "";
+    background: url(${serchBgImage});
+    background-repeat: no-repeat;
+    background-size: 312px 100px;
+    background-position: -300px 720px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* z-index: -3; */
+  }
   @media (max-width: 430px) {
     width: 90%;
     /* min-width: 0px; */
@@ -80,23 +117,4 @@ export const BackgroundSerchText = styled.span`
   bottom: 40px;
   z-index: -3;
   /* border: solid green 3px; */
-`;
-
-export const SerchBgImgWrapper = styled.div`
-  /* width: 100%; */
-  width: 315px;
-  height: 100px;
-  position: absolute;
-  left: -170px;
-  margin-left: 40px;
-  z-index: -3;
-  bottom: 40px;
-  background-image: url(${serchBgImage});
-  /* margin-left: -140px; */
-  /* left: ${(props) => (props.left ? "-140px" : "815px")}; */
-`;
-
-export const SerchBgImg = styled.img`
-  max-width: 100%;
-  height: auto;
 `;
