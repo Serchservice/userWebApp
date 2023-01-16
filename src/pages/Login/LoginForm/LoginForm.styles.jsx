@@ -30,13 +30,14 @@ export const Label = styled.label`
   width: 100%;
   font-weight: 400;
   font-size: 24px;
+  font-size: clamp(18px, 0.965rem + 0.59vw, 24px);
   color: #030001;
   line-height: 29px;
   margin-bottom: 5px;
   text-transform: capitalize;
   display: block;
   @media (max-width: 430px) {
-    font-size: 18px;
+    /* font-size: 18px; */
     font-weight: 300;
     line-height: 22px;
     margin-bottom: 10px;
@@ -50,6 +51,7 @@ export const InputWrapper = styled.div`
   border-radius: 10px;
   width: 100%;
   height: 70px;
+  height: clamp(55px, 10vw, 70px);
   padding-left: 20px;
   padding-right: 20px;
 
@@ -64,7 +66,7 @@ export const InputWrapper = styled.div`
 
 export const Input = styled.input`
   flex: 1;
-  font-size: 24px;
+  font-size: clamp(18px, 0.965rem + 0.59vw, 24px);
   font-weight: 400;
   color: #b3b3b3;
   width: 100%;
@@ -72,17 +74,17 @@ export const Input = styled.input`
   font-family: "Inria Sans", sans-serif;
 
   @media (max-width: 430px) {
-    font-size: 18px;
+    /* font-size: 18px; */
   }
   &:focus {
     border-width: 3px;
   }
   &::placeholder {
     color: #b3b3b3;
-    font-size: 24px;
+    font-size: clamp(18px, 0.965rem + 0.59vw, 24px);
     font-family: "Inria Sans", sans-serif;
     @media (max-width: 480px) {
-      font-size: 18px;
+      /* font-size: 18px; */
       font-weight: 300;
     }
   }
@@ -132,24 +134,26 @@ export const LoginBtnWrapper = styled.div`
 `;
 
 export const NewUserText = styled.span`
-  font-size: 28px;
-  line-height: 34px;
+  /* font-size: 28px; */
+  font-size: clamp(17px, 0.67rem + 1.195vw, 28px);
+  /* line-height: 34px; */
   color: rgba(124, 124, 124, 0.5);
   @media (max-width: 480px) {
     font-weight: 300;
-    font-size: 18px;
+    /* font-size: 18px; */
     line-height: 22px;
   }
 `;
 
 export const StyledLink = styled(Link)`
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: clamp(14px, 0.5025rem + 1.3861vw, 24px);
   font-weight: 24px;
   line-height: 29px;
   color: ${({ color }) => color};
   @media (max-width: 480px) {
     font-weight: 700;
-    font-size: 14px;
+    /* font-size: 14px; */
     line-height: 17px;
   }
   &:visited {
@@ -158,9 +162,12 @@ export const StyledLink = styled(Link)`
 `;
 
 export const LoginButton = styled.button`
-  width: 200px;
-  height: 55px;
+  /* width: 100%; */
+  /* max-width: 200px; */
+  width: clamp(130px, 15vw, 200px);
+  height: clamp(40px, 5vw, 55px);
   font-size: 28px;
+  font-size: clamp(18px, 0.86rem + 0.99vw, 28px);
   line-height: 34px;
   color: #fff;
   background: #3f0f36;
@@ -170,7 +177,7 @@ export const LoginButton = styled.button`
     width: min(110px, 130px);
     height: 40px;
     font-weight: 300;
-    font-size: 18px;
+    /* font-size: 18px; */
     line-height: 22px;
   }
 `;

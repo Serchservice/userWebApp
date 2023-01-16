@@ -21,6 +21,7 @@ export const Logo = styled.img`
 
 export const TagLine = styled.span`
   font-size: 24px;
+  font-size: clamp(15px, 0.96rem + 0.59vw, 20px);
   line-height: 29px;
   font-weight: 700;
   color: #f0f0f0;

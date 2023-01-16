@@ -42,13 +42,14 @@ export const Label = styled.label`
 
   span {
     font-weight: 300;
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: clamp(14px, 0.5025rem + 1.3861vw, 24px);
     line-height: 29px;
     margin-left: 16px;
     text-transform: capitalize;
     @media (max-width: 430px) {
       font-weight: 400;
-      font-size: 14px;
+      /* font-size: 14px; */
       line-height: 17px;
       margin-left: 7px;
     }

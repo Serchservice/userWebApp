@@ -26,6 +26,7 @@ export const FooterContent = styled.ul`
 
 export const FooterLink = styled(Link)`
   font-size: 20px;
+  font-size: clamp(12px, 0.54rem + 0.79vw, 20px);
   line-height: 24px;
   font-weight: 400;
   color: #b3b3b3;
