@@ -1,7 +1,14 @@
+// import Header from "./components/Header/Header";
+// import Footer from "./components/Footer/Footer";
+
+import Login from "./pages/Login/Login";
+
 function App() {
   return (
-    <h1> Serch Service</h1>
-  )
+    <>
+      <Login />
+    </>
+  );
 }
 
-export default App
+export default App;
