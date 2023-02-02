@@ -1,9 +1,14 @@
-import { Container } from "./Signup.styles";
+import { Container, Left, Right } from "./Signup.styles";
 
 const Signup = () => {
   return (
     <Container>
-      <h3>signup</h3>
+      <Left>
+        <p>left</p>
+      </Left>
+      <Right>
+        <p>Right</p>
+      </Right>
     </Container>
   );
 };
