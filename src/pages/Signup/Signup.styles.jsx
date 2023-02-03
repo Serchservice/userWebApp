@@ -21,3 +21,15 @@ export const Right = styled.div`
   flex-direction: column;
   border: solid blue 1px;
 `;
+
+export const LogoWrapper = styled.div`
+  width: 100%;
+  height: 71.86px;
+  /* border: solid red 1px; */
+  padding-top: 21px;
+  padding-left: 17px;
+  img {
+    height: 50.86px;
+    width: 52.9px;
+  }
+`;

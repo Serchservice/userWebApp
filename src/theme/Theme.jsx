@@ -8,6 +8,7 @@ const Theme = {
     white: {
       primary: "#FDFDFD",
       light: "#F0F0F0",
+      regular: "#FFFFFF",
     },
     purple: {
       light: "#3F0F36",
