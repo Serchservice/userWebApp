@@ -1,18 +1,24 @@
 import React from "react";
 import { FooterWrapper, FooterContent, FooterLink } from "./Footer.styles";
 
-function Footer() {
+function Footer({ page }) {
   return (
-    <FooterWrapper>
-      <FooterContent>
+    <FooterWrapper page={page}>
+      <FooterContent page={page}>
         <li>
-          <FooterLink to="#">privacy policy</FooterLink>
+          <FooterLink to="#" page={page}>
+            privacy policy
+          </FooterLink>
         </li>
         <li>
-          <FooterLink to="#">accessibility policy</FooterLink>
+          <FooterLink to="#" page={page}>
+            accessibility policy
+          </FooterLink>
         </li>
         <li>
-          <FooterLink to="#">terms and conditions</FooterLink>
+          <FooterLink to="#" page={page}>
+            terms and conditions
+          </FooterLink>
         </li>
       </FooterContent>
     </FooterWrapper>

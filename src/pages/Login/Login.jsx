@@ -40,7 +40,7 @@ const Login = () => {
         />
       </Main>
 
-      <Footer />
+      <Footer page="login" />
     </Container>
   );
 };
