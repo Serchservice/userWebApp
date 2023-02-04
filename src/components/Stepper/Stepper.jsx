@@ -5,7 +5,7 @@ const Stepper = ({ steps }) => {
   return (
     <StepperWrapper>
       {steps.map((step, i) => (
-        <StepperItem step={step} index={i} />
+        <StepperItem key={i} step={step} index={i} />
       ))}
     </StepperWrapper>
   );

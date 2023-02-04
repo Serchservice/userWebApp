@@ -5,10 +5,14 @@ import {
   LeftContent,
   Right,
   AccountOption,
+  HeaderWrapper,
+  RightContent,
 } from "./Signup.styles";
 import Logo from "../../assets/LogoWhite.png";
 import Stepper from "../../components/Stepper/Stepper";
 import Footer from "../../components/Footer/Footer";
+import SignupForm from "../../components/Form/SignupForm";
+import Header from "../../components/Header/Header";
 
 const steps = [
   {
@@ -47,7 +51,12 @@ const Signup = () => {
         <Footer page="signup" />
       </Left>
       <Right>
-        <p>Right</p>
+        <HeaderWrapper>
+          <Header />
+        </HeaderWrapper>
+        <RightContent>
+          <SignupForm />
+        </RightContent>
       </Right>
     </Container>
   );

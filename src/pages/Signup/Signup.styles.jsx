@@ -13,6 +13,9 @@ export const Left = styled.div`
   border: solid red 1px;
   min-height: 100vh;
   background-color: ${({ theme }) => theme.colors.black.primary};
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const Right = styled.div`
@@ -44,6 +47,7 @@ export const LeftContent = styled.div`
 export const AccountOption = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: clamp(24px, 3vw, 81px);
   margin-bottom: 118px;
   p {
@@ -61,4 +65,19 @@ export const AccountOption = styled.div`
     /* text-decoration: underline; */
     color: ${({ theme }) => theme.colors.purple.regular};
   }
+`;
+
+export const HeaderWrapper = styled.div`
+  display: none;
+  @media (max-width: 800px) {
+    display: flex;
+  }
+`;
+
+export const RightContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 49px; */
+  padding-right: clamp(1.1875rem, 0.178rem + 3.7562vw, 4.5rem);
+  padding-left: clamp(1.3125rem, 0.1506rem + 4.3232vw, 5.125rem);
 `;
