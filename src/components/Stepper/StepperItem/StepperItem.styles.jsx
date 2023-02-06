@@ -4,14 +4,14 @@ export const StepItem = styled.li`
   display: flex;
   gap: 1rem;
   position: relative;
-  padding-bottom: 4rem;
+  padding-bottom: 28px;
 
   &::before {
     content: "";
     position: relative;
     z-index: 1;
-    flex: 0 0 40px;
-    height: 40px;
+    flex: 0 0 clamp(2rem, 1.6158rem + 0.7685vw, 2.5rem);
+    height: clamp(2rem, 1.6158rem + 0.7685vw, 2.5rem);
     border-radius: 50%;
     background-color: lightgrey;
   }
@@ -19,10 +19,10 @@ export const StepItem = styled.li`
   &:not(:last-child)::after {
     content: "";
     position: absolute;
-    top: calc(40px + 8px);
+    top: calc(clamp(2rem, 1.6158rem + 0.7685vw, 2.5rem) + 8px);
     left: 0;
     bottom: 8px;
-    transform: translateX(calc(40px / 2));
+    transform: translateX(calc(clamp(2rem, 1.6158rem + 0.7685vw, 2.5rem) / 2));
     width: 2px;
     /* z-index: -1; */
     background-color: ${({ theme }) => theme.colors.white.regular};

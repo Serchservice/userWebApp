@@ -58,10 +58,6 @@ export const InputWrapper = styled.div`
   &:focus-within {
     border-width: 3px;
   }
-
-  @media (max-width: 430px) {
-    height: 55px;
-  }
 `;
 
 export const Input = styled.input`
@@ -72,13 +68,6 @@ export const Input = styled.input`
   width: 100%;
   height: 100%;
   font-family: "Inria Sans", sans-serif;
-
-  @media (max-width: 430px) {
-    /* font-size: 18px; */
-  }
-  &:focus {
-    border-width: 3px;
-  }
   &::placeholder {
     color: #b3b3b3;
     font-size: clamp(18px, 0.965rem + 0.59vw, 24px);

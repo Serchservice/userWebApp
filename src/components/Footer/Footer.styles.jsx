@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 export const FooterWrapper = styled.footer`
   width: 100%;
   margin: 54px 0 34px 0;
-  margin: ${({ page }) => (page === "login" ? "54px 0 34px 0" : "0 0 49px")};
+  margin: ${({ page }) => (page === "login" ? "54px 0 34px 0" : "0")};
+  /* padding-bottom: ${({ page }) => (page === "login" ? "0" : "49px")}; */
   @media (max-width: 480px) {
     margin: 142px 0 20px 0;
   }

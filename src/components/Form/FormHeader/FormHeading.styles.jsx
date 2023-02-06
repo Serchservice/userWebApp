@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const HeadingWrapper = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: clamp(1.375rem, -0.9678rem + 8.7172vw, 9.0625rem);
+  @media (max-width: 800px) {
+    align-items: center;
+  }
+`;
+
 export const MainHeadingElelemt = styled.h1`
   font-weight: 700;
   font-size: clamp(1.5rem, 1.0429rem + 1.7009vw, 3rem);

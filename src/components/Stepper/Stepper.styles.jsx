@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
 export const StepperWrapper = styled.ol`
-  margin-bottom: 906px;
+  flex: 1;
+  /* margin-bottom: 906px; */
 `;

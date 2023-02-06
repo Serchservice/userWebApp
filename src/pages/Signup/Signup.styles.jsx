@@ -3,16 +3,21 @@ import styled from "styled-components";
 export const Container = styled.main`
   width: 100%;
   max-width: 115rem;
+  /* max-height: 1821px; */
   display: flex;
 `;
 
 export const Left = styled.div`
   flex: 1;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 71.8px 1fr 24px;
   border: solid red 1px;
   min-height: 100vh;
   background-color: ${({ theme }) => theme.colors.black.primary};
+  padding-bottom: 49px;
   @media (max-width: 800px) {
     display: none;
   }
@@ -23,11 +28,12 @@ export const Right = styled.div`
   display: flex;
   flex-direction: column;
   border: solid blue 1px;
+  padding-bottom: 86px;
 `;
 
 export const LogoWrapper = styled.div`
   width: 100%;
-  height: 71.86px;
+  /* height: 71.86px; */
   /* border: solid red 1px; */
   padding-top: 21px;
   padding-left: 17px;
@@ -38,6 +44,8 @@ export const LogoWrapper = styled.div`
 `;
 
 export const LeftContent = styled.div`
+  display: flex;
+  flex-direction: column;
   padding-left: clamp(1.5rem, 0.2239rem + 4.7484vw, 5.6875rem);
   padding-right: clamp(1.875rem, -0.144rem + 7.5124vw, 8.5rem);
   padding-top: 245px;
@@ -45,6 +53,7 @@ export const LeftContent = styled.div`
 `;
 
 export const AccountOption = styled.div`
+  flex: 0 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;

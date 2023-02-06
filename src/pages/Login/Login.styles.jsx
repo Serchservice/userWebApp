@@ -49,7 +49,7 @@ export const Main = styled.main`
     width: 100%;
     height: 100%;
     position: absolute;
-    /* z-index: -3; */
+    z-index: -3;
   }
   @media (max-width: 430px) {
     width: 90%;

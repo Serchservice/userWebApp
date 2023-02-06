@@ -2,6 +2,7 @@ const Theme = {
   colors: {
     black: {
       primary: "#030001",
+      secondary: "#07070A",
       regular: "#000000",
     },
     grey: "#B3B3B3",
