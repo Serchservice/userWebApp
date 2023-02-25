@@ -6,6 +6,22 @@ export const FormContent = styled.div`
   padding-bottom: clamp(3.5rem, 2.9286rem + 2.1262vw, 5.375rem);
 `;
 
+export const Input = styled.input`
+  flex: 1;
+  font-weight: 300;
+  font-size: clamp(1.25rem, 0.9833rem + 0.9922vw, 2.125rem);
+  line-height: clamp(1.5rem, 1.1762rem + 1.2048vw, 2.5625rem);
+  color: ${({ theme }) => theme.colors.black.secondary};
+  width: 100%;
+  height: 100%;
+  font-family: "Inria Sans", sans-serif;
+  &::placeholder {
+    color: #b3b3b3;
+    font-size: clamp(1.25rem, 0.9833rem + 0.9922vw, 2.125rem);
+    font-family: "Inria Sans", sans-serif;
+  }
+`;
+
 export const ButtonWrapper = styled.div`
   width: 100%;
   display: flex;

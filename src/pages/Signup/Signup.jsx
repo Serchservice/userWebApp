@@ -12,6 +12,7 @@ import Logo from "../../assets/LogoWhite.png";
 import Stepper from "../../components/Stepper/Stepper";
 import Footer from "../../components/Footer/Footer";
 import SignupForm from "../../components/Form/SignupForm";
+import PersonalDetailsForm from "../../components/Form/PersonalDetails/PersonalDetails";
 import Header from "../../components/Header/Header";
 
 const steps = [
@@ -19,18 +20,19 @@ const steps = [
     step: 1,
     title: "Your personal details",
     description: "please provide us with your email and other information.",
+    path: "signup/personal_details",
   },
   {
     step: 2,
-    title: "select a plan",
+    title: "verify your email",
     description:
-      "From the list of Serch subscription plans, choose the one that most appeals to you.",
+      "We will send you a verification link and OTP to verifiy the email you provide to Serch",
+    path: "signup/verify_email",
   },
   {
     step: 3,
-    title: "Select a service and pay",
-    description:
-      "From the plan selected, you will choose the service you want and subscribe.",
+    title: "You're in!",
+    description: "We will automatically redirect you to the homepage",
   },
 ];
 
@@ -55,7 +57,7 @@ const Signup = () => {
           <Header />
         </HeaderWrapper>
         <RightContent>
-          <SignupForm />
+          <PersonalDetailsForm />
         </RightContent>
       </Right>
     </Container>
