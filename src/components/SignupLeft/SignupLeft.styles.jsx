@@ -7,7 +7,6 @@ export const Left = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 71.8px 1fr 24px;
-  border: solid red 1px;
   min-height: 100vh;
   background-color: ${({ theme }) => theme.colors.black.primary};
   padding-bottom: 49px;
