@@ -1,17 +1,22 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-
+import { useNavigate } from "react-router-dom";
 import FormHeading, {
   MainHeading,
   SubHeading,
-} from "../FormHeader/FormHeading";
-import { FormContent, Button, ButtonWrapper } from "./PersonalDetails.styles";
-import FormField from "../FormField/FormField";
-import { Input } from "./PersonalDetails.styles";
-import PasswordToggler from "../../PassWordToggler/PassowrdToggler";
-import { useState } from "react";
+} from "../../components/Form/FormHeader/FormHeading";
+import {
+  FormContent,
+  Button,
+  ButtonWrapper,
+  Input,
+} from "./PersonalDetailsForm.style";
+import FormField from "../../components/Form/FormField/FormField";
+import PasswordToggler from "../../components/PassWordToggler/PassowrdToggler";
 
 const PersonalDetailsForm = () => {
   const [isToggled, setIsToggled] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -19,6 +24,7 @@ const PersonalDetailsForm = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
+    navigate("/signup/verify_email");
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

@@ -1,4 +1,4 @@
-import PersonalDetails from "./PersonalDetails/PersonalDetails";
+import PersonalDetails from "../../pages/PersonalDetails/PersonalDetails";
 
 function SignupForm() {
   return (

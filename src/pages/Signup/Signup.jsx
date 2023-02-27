@@ -12,8 +12,10 @@ import Logo from "../../assets/LogoWhite.png";
 import Stepper from "../../components/Stepper/Stepper";
 import Footer from "../../components/Footer/Footer";
 import SignupForm from "../../components/Form/SignupForm";
-import PersonalDetailsForm from "../../components/Form/PersonalDetails/PersonalDetails";
+import PersonalDetailsForm from "../PersonalDetails/PersonalDetails";
 import Header from "../../components/Header/Header";
+import SignupLeft from "../../components/SignupLeft/SignupLeft";
+import { useLocation } from "react-router-dom";
 
 const steps = [
   {
@@ -37,9 +39,13 @@ const steps = [
 ];
 
 const Signup = () => {
+  const location = useLocation();
+  const render =
+    location.pathname === "verify_email" ? <h1>verify</h1> : <h1>details</h1>;
   return (
-    <Container>
-      <Left>
+    <>
+      <Container>
+        {/* <Left>
         <LogoWrapper>
           <img src={Logo} alt="serch app logo" />
         </LogoWrapper>
@@ -51,16 +57,16 @@ const Signup = () => {
           </AccountOption>
         </LeftContent>
         <Footer page="signup" />
-      </Left>
+      </Left> */}
+        {/* <SignupLeft steps={steps} />
       <Right>
-        <HeaderWrapper>
-          <Header />
-        </HeaderWrapper>
         <RightContent>
           <PersonalDetailsForm />
         </RightContent>
-      </Right>
-    </Container>
+      </Right> */}
+        {render}
+      </Container>
+    </>
   );
 };
 
