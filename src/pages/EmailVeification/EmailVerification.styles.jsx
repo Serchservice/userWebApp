@@ -39,7 +39,9 @@ export const ActivationInstruction = styled.p`
   text-align: center;
 `;
 
-export const PinInputWrapper = styled.div`
+export const PinInputWrapper = styled.div.attrs((props) => ({
+  className: props.className,
+}))`
   display: flex;
   justify-content: space-between;
   align-items: center;

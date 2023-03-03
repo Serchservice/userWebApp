@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Left = styled.div`
   flex: 1;
-  /* display: flex; */
-  /* flex-direction: column; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 71.8px 1fr 24px;

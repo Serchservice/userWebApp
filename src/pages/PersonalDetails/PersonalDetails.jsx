@@ -22,7 +22,8 @@ const steps = [
   {
     step: 3,
     title: "You're in!",
-    description: "We will automatically redirect you to the homepage",
+    description:
+      "We will automatically redirect you to the homepage or you can sign in to get to the homepage",
   },
 ];
 

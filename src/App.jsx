@@ -4,6 +4,7 @@ import PersonalDetailsForm from "./pages/PersonalDetails/PersonalDetails";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import EmailVerifiaction from "./pages/EmailVeification/EmailVerification";
+import VerifyEmail from "./pages/EmailVeification/VefrifyEmail";
 
 const steps = [
   {
@@ -36,7 +37,7 @@ function App() {
           path="/signup/personal_details"
           element={<PersonalDetailsForm />}
         />
-        <Route path="/signup/verify_email" element={<EmailVerifiaction />} />
+        <Route path="/signup/verify_email" element={<VerifyEmail />} />
       </Routes>
     </>
   );

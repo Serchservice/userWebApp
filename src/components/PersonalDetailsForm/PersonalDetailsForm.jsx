@@ -1,6 +1,13 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+//
+
+import "react-phone-input-2/lib/material.css";
+//
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import ExpandMore from "@mui/icons-material/ExpandMore";
 import FormHeading, {
   MainHeading,
   SubHeading,
@@ -13,6 +20,8 @@ import {
 } from "./PersonalDetailsForm.style";
 import FormField from "../../components/Form/FormField/FormField";
 import PasswordToggler from "../../components/PassWordToggler/PassowrdToggler";
+import { width } from "@mui/system";
+import { FormControl, InputLabel, TextField } from "@mui/material";
 
 const PersonalDetailsForm = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -20,6 +29,7 @@ const PersonalDetailsForm = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
@@ -58,20 +68,81 @@ const PersonalDetailsForm = () => {
           />
         </FormField>
         <FormField id="phone" fieldName="phone number">
-          <Input
+          {/* <Input
             type="tel"
             id="phone"
             placeholder="9849089837"
             {...register("phone")}
-          />
+          /> */}
+          <label id="phone-label">
+            <select id="phoneel-lab" style={{ width: "50px" }}>
+              <label>kakkak</label>
+              <option>1</option>
+              <option>1</option>
+            </select>
+          </label>
         </FormField>
-        <FormField id="gender" fieldName="gender">
-          <Input
-            type="text"
-            id="gender"
-            placeholder="Male"
-            {...register("gender")}
-          />
+
+        <FormField fieldName="Gender">
+          <FormControl
+            sx={{
+              fontFamily: "Inria Sans",
+              width: "100%",
+              "& label.Mui-focused": { color: "#b3b3b3" },
+              "& label.MuiFormLabel-filled": { display: "none" },
+            }}
+          >
+            <InputLabel
+              disableAnimation="true"
+              shrink="false"
+              sx={{
+                color: "#b3b3b3",
+                marginTop: "25px",
+                marginLeft: "-12px",
+                fontWeight: 300,
+                fontSize: "34px",
+                fontFamily: "Inria Sans",
+                // ".Mui-focused": { display: "none" },
+                // "& legend": { display: "none" },
+              }}
+            >
+              Select your gender
+            </InputLabel>
+            <Controller
+              name="gender"
+              control={control}
+              defaultValue=""
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  label="Select your gender"
+                  IconComponent={ExpandMore}
+                  sx={{
+                    fontFamily: "Inria Sans",
+                    fontWeight: 300,
+                    fontSize: "24px",
+                    color: "#030001",
+                    width: "100%",
+                    "&.MuiInputBase-root": {
+                      outline: "none",
+                      border: "none",
+                    },
+                    ".MuiOutlinedInput-notchedOutline": {
+                      outline: "none",
+                      border: "none",
+                      boxShadow: "none",
+                    },
+                  }}
+                >
+                  <MenuItem value="male">Male</MenuItem>
+                  <MenuItem value="female">Female</MenuItem>
+                  <MenuItem value="prefer not to say">
+                    prefer not to say
+                  </MenuItem>
+                </Select>
+              )}
+            />
+          </FormControl>
         </FormField>
         <FormField id="password" fieldName="password">
           <Input
