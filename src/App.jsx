@@ -3,8 +3,9 @@ import PersonalDetailsForm from "./pages/PersonalDetails/PersonalDetails";
 
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
-import EmailVerifiaction from "./pages/EmailVeification/EmailVerification";
+// import EmailVerifiaction from "./pages/EmailVeification/EmailVerification";
 import VerifyEmail from "./pages/EmailVeification/VefrifyEmail";
+import HomeScreen from "./pages/HomeScreen/HomeScreen";
 
 const steps = [
   {
@@ -38,6 +39,7 @@ function App() {
           element={<PersonalDetailsForm />}
         />
         <Route path="/signup/verify_email" element={<VerifyEmail />} />
+        <Route path="/user/home" element={<HomeScreen />} />
       </Routes>
     </>
   );

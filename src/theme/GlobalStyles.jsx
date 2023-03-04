@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Inria Sans", sans-serif;
   }
 
+
   body div#menu-gender div{
     box-shadow: none;
     /* background: #FDFDFD; */
