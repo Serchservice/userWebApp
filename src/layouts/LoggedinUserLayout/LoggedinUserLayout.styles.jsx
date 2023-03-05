@@ -36,11 +36,19 @@ export const Logo = styled.img`
   display: inline-block;
 `;
 
-export const MenuItems = styled.ul`
+export const NavMenu = styled.ul`
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 76px;
+
+  li a.active {
+    border-radius: 50%;
+    background-color: white;
+    svg {
+      color: black;
+    }
+  }
 `;
 
 export const MenuItem = styled.li`

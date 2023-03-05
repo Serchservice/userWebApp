@@ -9,7 +9,7 @@ import {
   ArrowRightIcon,
 } from "./Icons";
 import {
-  MenuItems,
+  NavMenu,
   MenuItem,
   LinkItems,
   Container,
@@ -17,7 +17,7 @@ import {
   Nav,
   NavTop,
   NavBottom,
-} from "./LoggedinUserlaOut.styles";
+} from "./LoggedinUserLayout.styles";
 import { Outlet } from "react-router-dom";
 export default function LoggedinUserLayout() {
   return (
@@ -25,7 +25,7 @@ export default function LoggedinUserLayout() {
       <Nav>
         <NavTop>
           <Logo src={logo} alt="serch logo" />
-          <MenuItems>
+          <NavMenu>
             <MenuItem>
               <LinkItems to="home">
                 <SafeHomeIcon />
@@ -51,7 +51,7 @@ export default function LoggedinUserLayout() {
                 <ProfileCircleIcon />
               </LinkItems>
             </MenuItem>
-          </MenuItems>
+          </NavMenu>
         </NavTop>
         <NavBottom>
           <Avatar />
