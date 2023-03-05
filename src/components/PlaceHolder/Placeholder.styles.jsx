@@ -1,12 +1,5 @@
 import styled from "styled-components";
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
-
-export const ChatsWrapper = styled.article`
+export const PlaceholderWrapper = styled.article`
   /* display: flex; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -18,7 +11,7 @@ export const ChatsWrapper = styled.article`
   padding: 151px 60px 0;
 `;
 
-export const ChartItem = styled.span`
+export const PlaceholderItem = styled.span`
   display: inline-block;
   background: #efefef;
   border-radius: 20px;

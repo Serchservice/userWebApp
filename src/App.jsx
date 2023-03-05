@@ -10,6 +10,7 @@ import LoggedinUserLayout from "./layouts/LoggedinUserLayout/LoggedinUserLayout"
 import Chat from "./pages/Chat/Chat";
 import Call from "./pages/Call/Call";
 import Settings from "./pages/Settings/Settings";
+import UserProfile from "./pages/Profile/UserProfile";
 
 const steps = [
   {
@@ -49,6 +50,7 @@ function App() {
           <Route path="chat" element={<Chat />} />
           <Route path="call" element={<Call />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="profile" element={<UserProfile />} />
         </Route>
       </Routes>
     </>

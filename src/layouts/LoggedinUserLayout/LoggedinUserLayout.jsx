@@ -16,6 +16,7 @@ import {
   Nav,
   NavTop,
   NavBottom,
+  MainContent,
 } from "./LoggedinUserLayout.styles";
 import { Outlet } from "react-router-dom";
 export default function LoggedinUserLayout() {
@@ -29,20 +30,19 @@ export default function LoggedinUserLayout() {
             <NavMenuItem path="chat" icon={<ChatIcon />} />
             <NavMenuItem path="call" icon={<CallIcon />} />
             <NavMenuItem path="settings" icon={<SettingIcon />} />
-            <NavMenuItem path="profile" icon={<SafeHomeIcon />} />
-            <NavMenuItem path="home" icon={<ProfileCircleIcon />} />
+            <NavMenuItem path="profile" icon={<ProfileCircleIcon />} />
           </NavMenu>
         </NavTop>
         <NavBottom>
-          <Avatar />
+          <Avatar width="100px" height="100px" />
           <span>
             <ArrowRightIcon />
           </span>
         </NavBottom>
       </Nav>
-      <main style={{ flex: 1 }}>
+      <MainContent>
         <Outlet />
-      </main>
+      </MainContent>
     </Container>
   );
 }

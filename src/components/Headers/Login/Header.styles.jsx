@@ -17,6 +17,7 @@ export const HeaderWrapper = styled.header`
 export const Logo = styled.img`
   width: 45px;
   height: 45px;
+  cursor: pointer;
 `;
 
 export const TagLine = styled.span`

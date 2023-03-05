@@ -1,9 +1,9 @@
 import { UserAvatar } from "./Avatar.styles";
 import profilePics from "../../assets/profilePics.jpg";
 
-function Avatar() {
+function Avatar({ width, height, border }) {
   return (
-    <UserAvatar>
+    <UserAvatar width={width} height={height} border={border}>
       <img src={profilePics} />
     </UserAvatar>
   );

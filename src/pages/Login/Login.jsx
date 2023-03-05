@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import Header from "../../components/Header/Header";
+import LoginHeader from "../../components/Headers/Login/Header";
 import Footer from "../../components/Footer/Footer";
 import LoginForm from "./LoginForm/LoginForm";
 
@@ -26,7 +26,7 @@ const Login = () => {
   console.log(errors);
   return (
     <Container>
-      <Header />
+      <LoginHeader />
       <Main>
         <WelcomeMessage>
           <WelcomeMessageHeader> Hi there,</WelcomeMessageHeader>

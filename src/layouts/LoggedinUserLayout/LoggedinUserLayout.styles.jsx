@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+
 export const Container = styled.main`
   width: 100%;
   max-width: 115rem;
@@ -51,47 +51,6 @@ export const NavMenu = styled.ul`
   }
 `;
 
-export const MenuItem = styled.li`
-  width: 70px;
-  height: 70px;
-`;
-
-export const LinkItems = styled(NavLink)`
-  width: inherit;
-  height: inherit;
-  /* border: solid white 1px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* .active {
-    background-color: green;
-    border: solid red 1px;
-    svg {
-      color: orange;
-    }
-  } */
-
-  &:hover {
-    border-radius: 50%;
-    background-color: white;
-    svg {
-      color: black;
-    }
-  }
-
-  &:focus {
-    border-radius: 50%;
-    background-color: white;
-    svg {
-      color: black;
-    }
-  }
-  svg {
-    color: white;
-  }
-`;
-
 export const NavBottom = styled.div`
   display: flex;
   flex-direction: column;
@@ -101,4 +60,10 @@ export const NavBottom = styled.div`
   span {
     cursor: pointer;
   }
+`;
+
+export const MainContent = styled.main`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 `;

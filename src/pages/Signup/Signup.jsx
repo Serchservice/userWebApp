@@ -13,7 +13,7 @@ import Stepper from "../../components/Stepper/Stepper";
 import Footer from "../../components/Footer/Footer";
 import SignupForm from "../../components/Form/SignupForm";
 import PersonalDetailsForm from "../PersonalDetails/PersonalDetails";
-import Header from "../../components/Header/Header";
+// import Header from "../../components/Header/Header";
 import SignupLeft from "../../components/SignupLeft/SignupLeft";
 import { useLocation } from "react-router-dom";
 
