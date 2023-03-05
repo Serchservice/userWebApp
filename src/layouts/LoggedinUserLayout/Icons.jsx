@@ -36,7 +36,7 @@ export const CallIcon = () => {
   );
 };
 
-export const MessageIcon = () => {
+export const ChatIcon = () => {
   return (
     <svg
       width="48"

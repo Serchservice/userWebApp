@@ -1,8 +1,9 @@
 import logo from "../../assets/logo.svg";
 import Avatar from "../../components/Avatar/Avatar";
+import NavMenuItem from "../../components/NavMenuItem/NavMenuItem";
 import {
   SafeHomeIcon,
-  MessageIcon,
+  ChatIcon,
   ProfileCircleIcon,
   CallIcon,
   SettingIcon,
@@ -10,8 +11,6 @@ import {
 } from "./Icons";
 import {
   NavMenu,
-  MenuItem,
-  LinkItems,
   Container,
   Logo,
   Nav,
@@ -26,31 +25,12 @@ export default function LoggedinUserLayout() {
         <NavTop>
           <Logo src={logo} alt="serch logo" />
           <NavMenu>
-            <MenuItem>
-              <LinkItems to="home">
-                <SafeHomeIcon />
-              </LinkItems>
-            </MenuItem>
-            <MenuItem>
-              <LinkItems to="chat">
-                <MessageIcon />
-              </LinkItems>
-            </MenuItem>
-            <MenuItem>
-              <LinkItems to="call">
-                <CallIcon />
-              </LinkItems>
-            </MenuItem>
-            <MenuItem>
-              <LinkItems to="settings">
-                <SettingIcon />
-              </LinkItems>
-            </MenuItem>
-            <MenuItem>
-              <LinkItems to="gg">
-                <ProfileCircleIcon />
-              </LinkItems>
-            </MenuItem>
+            <NavMenuItem path="home" icon={<SafeHomeIcon />} />
+            <NavMenuItem path="chat" icon={<ChatIcon />} />
+            <NavMenuItem path="call" icon={<CallIcon />} />
+            <NavMenuItem path="settings" icon={<SettingIcon />} />
+            <NavMenuItem path="profile" icon={<SafeHomeIcon />} />
+            <NavMenuItem path="home" icon={<ProfileCircleIcon />} />
           </NavMenu>
         </NavTop>
         <NavBottom>

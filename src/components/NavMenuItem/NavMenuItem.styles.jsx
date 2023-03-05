@@ -1,14 +1,14 @@
 import styled from "styled-components";
+import { NavLink as Link } from "react-router-dom";
 
 export const MenuItem = styled.li`
   width: 70px;
   height: 70px;
 `;
 
-export const LinkItems = styled(NavLink)`
+export const NavLink = styled(Link)`
   width: inherit;
   height: inherit;
-  /* border: solid white 1px; */
   display: flex;
   justify-content: center;
   align-items: center;
