@@ -11,6 +11,8 @@ import Chat from "./pages/Chat/Chat";
 import Call from "./pages/Call/Call";
 import Settings from "./pages/Settings/Settings";
 import UserProfile from "./pages/Profile/UserProfile";
+import SignupLayout from "./layouts/SignupLayout/SignupLayout";
+import PersonalDetails from "./pages/PersonalDetails/PersonalDetails";
 
 const steps = [
   {
@@ -38,12 +40,11 @@ function App() {
     <>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route
-          path="/signup/personal_details"
-          element={<PersonalDetailsForm />}
-        />
-        <Route path="/signup/verify_email" element={<VerifyEmail />} />
+        <Route path="/signup" element={<SignupLayout />}>
+          <Route index element={<PersonalDetails />} />
+          <Route path="personal_details" element={<PersonalDetails />} />
+          <Route path="verify_email" element={<VerifyEmail />} />
+        </Route>
         <Route path="/user" element={<LoggedinUserLayout />}>
           <Route index element={<Home />} />
           <Route path="home" element={<Home />} />

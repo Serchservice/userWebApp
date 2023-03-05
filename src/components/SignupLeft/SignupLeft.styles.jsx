@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Left = styled.div`
+export const Left = styled.section`
   flex: 1;
   display: grid;
   grid-template-columns: 1fr;
