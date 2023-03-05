@@ -1,6 +1,21 @@
 import styled from "styled-components";
 import backgroundPic from "../../assets/profileHeaderBackground.png";
 import flag from "../../assets/ng.png";
+import slogan from "../../assets/serviceMadeEasy.png";
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+`;
+
+export const ProfilWrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
 
 export const Header = styled.section`
   width: 100%;
@@ -166,4 +181,16 @@ export const RatingItems = styled.div`
     line-height: 34px;
     color: #727272;
   }
+`;
+
+export const ProfileFooter = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+  margin-bottom: 15px;
+  background-image: url(${slogan});
+  background-repeat: no-repeat;
+  background-position: center;
 `;

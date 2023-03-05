@@ -1,8 +1,8 @@
 import { PlaceholderItem, PlaceholderWrapper } from "./Placeholder.styles";
 
-export const PlaceHolder = () => {
+export const PlaceHolder = ({ padding }) => {
   return (
-    <PlaceholderWrapper>
+    <PlaceholderWrapper padding={padding}>
       <PlaceholderItem />
       <PlaceholderItem />
       <PlaceholderItem />

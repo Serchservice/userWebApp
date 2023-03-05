@@ -8,7 +8,7 @@ export const PlaceholderWrapper = styled.article`
   max-width: 1710px;
 
   /* flex-wrap: wrap; */
-  padding: 151px 60px 0;
+  padding: ${({ padding }) => padding || "151px"} 60px 0;
 `;
 
 export const PlaceholderItem = styled.span`
