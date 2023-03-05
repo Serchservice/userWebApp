@@ -17,8 +17,9 @@ import {
   Nav,
   NavTop,
   NavBottom,
-} from "./HomeScreen.styles";
-function HomeScreen() {
+} from "./LoggedinUserlaOut.styles";
+import { Outlet } from "react-router-dom";
+export default function LoggedinUserLayout() {
   return (
     <Container>
       <Nav>
@@ -26,22 +27,22 @@ function HomeScreen() {
           <Logo src={logo} alt="serch logo" />
           <MenuItems>
             <MenuItem>
-              <LinkItems to="#">
+              <LinkItems to="home">
                 <SafeHomeIcon />
               </LinkItems>
             </MenuItem>
             <MenuItem>
-              <LinkItems to="gg">
+              <LinkItems to="chat">
                 <MessageIcon />
               </LinkItems>
             </MenuItem>
             <MenuItem>
-              <LinkItems to="gg">
+              <LinkItems to="call">
                 <CallIcon />
               </LinkItems>
             </MenuItem>
             <MenuItem>
-              <LinkItems to="gg">
+              <LinkItems to="settings">
                 <SettingIcon />
               </LinkItems>
             </MenuItem>
@@ -59,7 +60,9 @@ function HomeScreen() {
           </span>
         </NavBottom>
       </Nav>
+      <main style={{ flex: 1 }}>
+        <Outlet />
+      </main>
     </Container>
   );
 }
-export default HomeScreen;

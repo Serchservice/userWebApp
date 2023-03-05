@@ -82,10 +82,6 @@ export const LinkItems = styled(NavLink)`
   svg {
     color: white;
   }
-
-  .active {
-    background-color: purple;
-  }
 `;
 
 export const NavBottom = styled.div`

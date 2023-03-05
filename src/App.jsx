@@ -5,7 +5,11 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 // import EmailVerifiaction from "./pages/EmailVeification/EmailVerification";
 import VerifyEmail from "./pages/EmailVeification/VefrifyEmail";
-import HomeScreen from "./pages/HomeScreen/HomeScreen";
+import Home from "./pages/Home/Home";
+import LoggedinUserLayout from "./layouts/LoggedinUserLayout/LoggedinUserLayout";
+import Chat from "./pages/Chat/Chat";
+import Call from "./pages/Call/Call";
+import Settings from "./pages/Settings/Settings";
 
 const steps = [
   {
@@ -39,7 +43,13 @@ function App() {
           element={<PersonalDetailsForm />}
         />
         <Route path="/signup/verify_email" element={<VerifyEmail />} />
-        <Route path="/user/home" element={<HomeScreen />} />
+        <Route path="/user" element={<LoggedinUserLayout />}>
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="chat" element={<Chat />} />
+          <Route path="call" element={<Call />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
       </Routes>
     </>
   );
