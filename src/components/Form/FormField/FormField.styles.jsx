@@ -20,8 +20,9 @@ export const Label = styled.label`
 
 export const InputFieldWrapper = styled(InputWrapper)`
   height: clamp(3.4375rem, 2.7709rem + 2.4805vw, 5.625rem);
-  padding-left: clamp(20px, 1.0786rem + 0.6378vw, 29px);
-  padding-right: clamp(20px, 1.0786rem + 0.6378vw, 29px);
+  padding: 0
+    ${({ noPadding }) =>
+      noPadding ? 0 : "clamp(20px, 1.0786rem + 0.6378vw, 29px)"};
   align-items: center;
 `;
 

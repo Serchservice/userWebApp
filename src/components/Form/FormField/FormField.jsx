@@ -1,10 +1,10 @@
 import { FieldWrapper, InputFieldWrapper, Label } from "./FormField.styles";
 
-const FormField = ({ children, id, fieldName }) => {
+const FormField = ({ children, id, fieldName, noPadding }) => {
   return (
     <FieldWrapper>
       <Label htmlFor={id}>{fieldName}</Label>
-      <InputFieldWrapper>{children}</InputFieldWrapper>
+      <InputFieldWrapper noPadding={noPadding}>{children}</InputFieldWrapper>
     </FieldWrapper>
   );
 };

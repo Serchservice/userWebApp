@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-//
-
-import "react-phone-input-2/lib/material.css";
-//
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -20,8 +16,8 @@ import {
 } from "./PersonalDetailsForm.style";
 import FormField from "../../components/Form/FormField/FormField";
 import PasswordToggler from "../../components/PassWordToggler/PassowrdToggler";
-import { width } from "@mui/system";
 import { FormControl, InputLabel, TextField } from "@mui/material";
+import { PhoneInputField } from "../PhoneInputField/PhoneInputField";
 
 const PersonalDetailsForm = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -67,23 +63,9 @@ const PersonalDetailsForm = () => {
             {...register("email")}
           />
         </FormField>
-        <FormField id="phone" fieldName="phone number">
-          {/* <Input
-            type="tel"
-            id="phone"
-            placeholder="9849089837"
-            {...register("phone")}
-          /> */}
-          <label id="phone-label">
-            <select id="phoneel-lab" style={{ width: "50px" }}>
-              <label>kakkak</label>
-              <option>1</option>
-              <option>1</option>
-            </select>
-          </label>
-        </FormField>
+        <PhoneInputField control={control} />
 
-        <FormField fieldName="Gender">
+        <FormField fieldName="Gender" noPadding>
           <FormControl
             sx={{
               fontFamily: "Inria Sans",
@@ -102,6 +84,8 @@ const PersonalDetailsForm = () => {
                 fontWeight: 300,
                 fontSize: "34px",
                 fontFamily: "Inria Sans",
+                zIndex: "-2",
+                paddingLeft: "clamp(20px, 2.2vw, 29px)",
                 // ".Mui-focused": { display: "none" },
                 // "& legend": { display: "none" },
               }}
