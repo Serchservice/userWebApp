@@ -5,9 +5,11 @@ export const PhoneNumberInput = ({ country, value, onChange, control }) => {
   return (
     <InputWrapper>
       <PhoneInput
-        name="phoneInput"
+        name="phoneNumber"
         control={control}
-        rules={{ required: true }}
+        rules={{
+          required: "phone number is required",
+        }}
         international
         country={country}
         defaultCountry="NG"

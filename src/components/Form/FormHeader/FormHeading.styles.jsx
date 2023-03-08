@@ -13,8 +13,8 @@ export const HeadingWrapper = styled.header`
 
 export const MainHeadingElelemt = styled.h1`
   font-weight: 700;
-  font-size: clamp(1.5rem, 1.0429rem + 1.7009vw, 3rem);
-  line-height: clamp(1.8125rem, 1.2601rem + 2.0553vw, 3.625rem);
+  font-size: clamp(1.5rem, 0.3473rem + 2.3055vw, 3rem);
+  line-height: clamp(1.8125rem, 4vw, 3.625rem);
   color: ${({ theme }) => theme.colors.black.primary};
 `;
 

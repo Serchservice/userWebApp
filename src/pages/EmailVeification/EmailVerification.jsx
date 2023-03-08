@@ -1,18 +1,20 @@
 import { useForm } from "react-hook-form";
-
+import Footer from "../../components/Footer/Footer";
 import FormHeading, {
   MainHeading,
   SubHeading,
 } from "../../components/Form/FormHeader/FormHeading";
 import SignupButton from "../../components/SignupButton/SignupButton";
 import {
-  ActivationGuide,
-  ActivationInstruction,
+  // ActivationGuide,
+  // ActivationInstruction,
   Right,
   RightContent,
   PinInputWrapper,
   PinResendOption,
   PinResetLink,
+  HeaderText,
+  Fieldset,
 } from "./EmailVerification.styles";
 import PinInput from "../../components/PinInput/PinInput";
 
@@ -23,31 +25,35 @@ const EmailVerifiaction = () => {
         <form>
           <FormHeading>
             <MainHeading>verify your email address</MainHeading>
-            <SubHeading>
+            <p>
               We have sent you an email to the address you provided us when you
               created this Serch account
-            </SubHeading>
+            </p>
           </FormHeading>
-          <ActivationGuide>
+          <span className="pinOptions">
             Either use the link in the provided email address or get the pin
             sent to you
-          </ActivationGuide>
-          <ActivationInstruction>
-            Enter your six-digit pin
-          </ActivationInstruction>
-          <PinInputWrapper className="cc-inputs">
-            <PinInput />
-            <PinInput />
-            <PinInput />
-            <PinInput />
-            <PinInput />
-          </PinInputWrapper>
+          </span>
+          <Fieldset>
+            <legend>Enter your six-digit pin</legend>
+            <PinInputWrapper className="cc-inputs">
+              <PinInput />
+              <PinInput />
+              <PinInput />
+              <PinInput />
+              <PinInput />
+            </PinInputWrapper>
+          </Fieldset>
           <PinResendOption>
-            Didn't get an email? <PinResetLink>Resend email</PinResetLink>
+            <span className="resendText">Didn't get an email?</span>{" "}
+            <PinResetLink>Resend email</PinResetLink>
           </PinResendOption>
-          <SignupButton>Finish</SignupButton>
+          <SignupButton>Verify</SignupButton>
         </form>
       </RightContent>
+      <div className="footerWrapper">
+        <Footer page="login" />
+      </div>
     </Right>
   );
 };

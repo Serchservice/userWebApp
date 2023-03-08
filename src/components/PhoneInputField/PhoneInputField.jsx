@@ -10,12 +10,13 @@ import {
   InputWrapper,
   Label,
   SelectWrapper,
+  ValidationMessage,
 } from "./PhoneInputField.styles";
 
-export const PhoneInputField = ({ controller, control }) => {
+export const PhoneInputField = ({ control, errors }) => {
   const [country, setCountry] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  console.log(phoneNumber);
+  console.log(phoneNumber, errors);
   return (
     <FormField>
       <Label>phone number</Label>
@@ -38,6 +39,8 @@ export const PhoneInputField = ({ controller, control }) => {
           />
         </InputWrapper>
       </FieldWrapper>
+      <ValidationMessage>{errors.phoneNumber?.message}</ValidationMessage>
+      {/* <ValidationMessage>{errors.phoneNumber?.}</ValidationMessage> */}
     </FormField>
   );
 };

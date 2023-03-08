@@ -63,7 +63,7 @@ const PersonalDetailsForm = () => {
             {...register("email")}
           />
         </FormField>
-        <PhoneInputField control={control} />
+        <PhoneInputField control={control} errors={errors} />
 
         <FormField fieldName="Gender" noPadding>
           <FormControl
@@ -82,10 +82,11 @@ const PersonalDetailsForm = () => {
                 marginTop: "25px",
                 marginLeft: "-12px",
                 fontWeight: 300,
-                fontSize: "34px",
+                fontSize: "28px",
                 fontFamily: "Inria Sans",
                 zIndex: "-2",
                 paddingLeft: "clamp(20px, 2.2vw, 29px)",
+
                 // ".Mui-focused": { display: "none" },
                 // "& legend": { display: "none" },
               }}

@@ -18,7 +18,7 @@ export const Input = styled.input`
   &::placeholder {
     color: #b3b3b3;
     font-size: clamp(1.25rem, 0.9833rem + 0.9922vw, 2.125rem);
-    font-family: "Inria Sans", sans-serif;
+    font-family: "Inria Sans";
   }
 `;
 
@@ -39,4 +39,17 @@ export const Button = styled.button`
   font-weight: 700;
   font-size: 32px;
   line-height: 39px;
+`;
+
+export const ValidationMessage = styled.span`
+  color: #ff0039;
+  font-size: clamp(0.875rem, 0.3947rem + 0.9606vw, 1.5rem);
+  padding-left: 10px;
+  margin-top: 5px;
+  font-family: 300;
+  @media (max-width: 430px) {
+    /* font-size: 18px; */
+    /* font-weight: 300; */
+    line-height: 22px;
+  }
 `;

@@ -50,7 +50,7 @@ export const SelectWrapper = styled.div`
   width: clamp(7.0625rem, 2.8838rem + 8.3573vw, 12.5rem);
   height: 100%;
   /* height: clamp(3.1875rem, 1.5545rem + 3.2661vw, 5.3125rem); */
-  padding-left: clamp(0.5rem, 0.0197rem + 0.9606vw, 1.125rem);
+  padding-left: clamp(0.5rem, 1.5vw, 1.125rem);
   background: #fdfdfd;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px 0px 0px 10px;
@@ -73,4 +73,13 @@ export const InputWrapper = styled.div`
       font-family: "Inria Sans", sans-serif;
     }
   }
+`;
+
+export const ValidationMessage = styled.span`
+  color: #ff0039;
+  font-size: clamp(1rem, 0.6158rem + 0.7685vw, 1.5rem);
+  padding-left: 10px;
+  margin-top: 5px;
+  font-family: 300;
+  line-height: 22px;
 `;
