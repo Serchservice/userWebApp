@@ -1,36 +1,36 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { stepsIcon } from "../../data/stepIconData";
 import { StepperWrapper } from "./Stepper.styles";
 import StepperItem from "./StepperItem/StepperItem";
+import { useBackListener } from "../../hooks/useBackListener";
 
-const Stepper = ({ steps }) => {
-  const [currentStep, setCurrentStep] = useState(steps[0].step);
-  const loaction = useLocation();
+const Stepper = ({ steps, activeStep, stepHandler }) => {
+  let stepIcon;
 
-  const nextHandler = () => {
-    if (currentStep < steps.length) {
-      setCurrentStep(currentStep + 1);
+  const setStepIcon = (step) => {
+    if (step === activeStep) {
+      stepIcon = stepsIcon.ongoing;
     }
+    if (step < activeStep) {
+      stepIcon = stepsIcon.done;
+    }
+
+    if (step > activeStep) {
+      stepIcon = stepsIcon.undone;
+    }
+    return stepIcon;
   };
 
-  const stepBg = (path, index) => {
-    if (path === location) {
-      console.log("ongoing");
-    }
-    if (path !== location && index < currentStep) {
-      console.log("completed");
-    }
+  useBackListener(() => {
+    stepHandler("decrease");
+  });
 
-    console.log("next");
-  };
   return (
     <StepperWrapper>
-      {steps.map((step, i) => (
+      {steps.map((step) => (
         <StepperItem
-          key={i}
+          key={step.step}
           step={step}
-          index={i}
-          stepBg={stepBg(step.path, i)}
+          stepBg={setStepIcon(step.step)}
         />
       ))}
     </StepperWrapper>

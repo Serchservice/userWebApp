@@ -5,7 +5,6 @@ import { SubHeading } from "../../components/Form/FormHeader/FormHeading";
 export const Container = styled.main`
   width: 100%;
   max-width: 115rem;
-  /* max-height: 1821px; */
   display: flex;
 `;
 
@@ -38,7 +37,6 @@ export const RightContent = styled.div`
   }
 
   span.pinOptions {
-    /* display: flex; */
     display: inline-block;
     font-size: clamp(1rem, 0.6158rem + 0.7685vw, 1.5rem);
     padding: 17px 19px;
@@ -84,22 +82,6 @@ export const PinInputWrapper = styled.div.attrs((props) => ({
   }
 `;
 
-// export const PinInput = styled.input`
-//   flex: 1;
-//   width: 100%;
-//   /* width: clamp(50px, 6vw, 100px); */
-//   max-width: 100px;
-//   min-width: 45px;
-//   height: clamp(8vh, 8vh, 10vh);
-//   height: 10vh;
-//   max-height: 70px;
-//   border: 2px solid #3b043b;
-//   border-radius: 10px;
-//   display: flex;
-//   text-align: center;
-//   font-size: 24px;
-// `;
-
 export const PinResendOption = styled.div`
   font-weight: 700;
   font-size: clamp(1.25rem, 1.0579rem + 0.3842vw, 1.5rem);
@@ -115,6 +97,7 @@ export const PinResendOption = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    font-size: 18px;
   }
 `;
 

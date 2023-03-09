@@ -1,8 +1,9 @@
 import { StepItem } from "./StepperItem.styles";
 
-const StepperItem = ({ step }) => {
+const StepperItem = ({ step, stepBg }) => {
+  console.log();
   return (
-    <StepItem>
+    <StepItem stepBg={stepBg}>
       <div>
         <h3>{step.title}</h3>
         <p>{step.description}</p>

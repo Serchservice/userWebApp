@@ -5,10 +5,10 @@ import {
   AccountOption,
 } from "./SignupLeft.styles";
 import Logo from "../../assets/LogoWhite.png";
-import Stepper from "../../components/Stepper/Stepper";
+import Stepper from "../Stepper/Stepper";
 import Footer from "../../components/Footer/Footer";
 
-const SignupLeft = ({ steps }) => {
+const SignupLeft = ({ steps, activeStep, stepHandler }) => {
   return (
     <>
       <Left>
@@ -16,7 +16,11 @@ const SignupLeft = ({ steps }) => {
           <img src={Logo} alt="serch app logo" />
         </LogoWrapper>
         <LeftContent>
-          <Stepper steps={steps} />
+          <Stepper
+            steps={steps}
+            activeStep={activeStep}
+            stepHandler={stepHandler}
+          />
           <AccountOption>
             <p>Already have an account</p>
             <span>Log me in</span>

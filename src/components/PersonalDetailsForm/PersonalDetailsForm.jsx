@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
+/*start of MUI imports*/
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import { FormControl, InputLabel, TextField } from "@mui/material";
+/*end of MUI imports*/
+
 import FormHeading, {
   MainHeading,
   SubHeading,
@@ -16,12 +21,12 @@ import {
 } from "./PersonalDetailsForm.style";
 import FormField from "../../components/Form/FormField/FormField";
 import PasswordToggler from "../../components/PassWordToggler/PassowrdToggler";
-import { FormControl, InputLabel, TextField } from "@mui/material";
 import { PhoneInputField } from "../PhoneInputField/PhoneInputField";
 
-const PersonalDetailsForm = () => {
+const PersonalDetailsForm = ({ stepHandler }) => {
   const [isToggled, setIsToggled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
   const {
     register,
     handleSubmit,
@@ -30,6 +35,7 @@ const PersonalDetailsForm = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
+    stepHandler("increase");
     navigate("/signup/verify_email");
   };
   return (

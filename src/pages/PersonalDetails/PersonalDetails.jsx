@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Right, RightContent } from "./PersonalDetails.styles";
 import PersonalDetailsForm from "../../components/PersonalDetailsForm/PersonalDetailsForm";
 
-const PersonalDetails = () => {
+const PersonalDetails = ({ stepHandler }) => {
   const [isToggled, setIsToggled] = useState(false);
   const navigate = useNavigate();
   const {
@@ -19,7 +19,7 @@ const PersonalDetails = () => {
   return (
     <Right>
       <RightContent>
-        <PersonalDetailsForm />
+        <PersonalDetailsForm stepHandler={stepHandler} />
       </RightContent>
     </Right>
   );
