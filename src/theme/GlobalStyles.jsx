@@ -13,6 +13,17 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Inria Sans", sans-serif;
   }
 
+
+  body div#menu-gender div{
+    box-shadow: none;
+    /* background: #FDFDFD; */
+    margin-top: -4px;
+    border: 2px solid #740274;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  
+
   a {
     text-decoration: none;
   }

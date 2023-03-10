@@ -1,8 +1,8 @@
 import React from "react";
-import { HeaderWrapper, Logo, TagLine } from "./header.styles";
-import logo from "../../assets/LogoWhite.png";
+import { HeaderWrapper, Logo, TagLine } from "./Header.styles";
+import logo from "../../../assets/LogoWhite.png";
 
-function Header() {
+function LoginHeader() {
   return (
     <HeaderWrapper>
       <Logo src={logo} alt="serch logo" />
@@ -11,4 +11,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default LoginHeader;
