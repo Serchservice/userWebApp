@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import { Right, RightContent } from "./PersonalDetails.styles";
 import PersonalDetailsForm from "../../components/PersonalDetailsForm/PersonalDetailsForm";
 
@@ -21,6 +22,9 @@ const PersonalDetails = ({ stepHandler }) => {
       <RightContent>
         <PersonalDetailsForm stepHandler={stepHandler} />
       </RightContent>
+      <div className="footerWrapper">
+        <Footer page="login" />
+      </div>
     </Right>
   );
 };

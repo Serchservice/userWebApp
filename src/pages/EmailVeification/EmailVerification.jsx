@@ -1,19 +1,14 @@
-import { useForm } from "react-hook-form";
 import Footer from "../../components/Footer/Footer";
 import FormHeading, {
   MainHeading,
-  SubHeading,
 } from "../../components/Form/FormHeader/FormHeading";
 import SignupButton from "../../components/SignupButton/SignupButton";
 import {
-  // ActivationGuide,
-  // ActivationInstruction,
   Right,
   RightContent,
   PinInputWrapper,
   PinResendOption,
   PinResetLink,
-  HeaderText,
   Fieldset,
 } from "./EmailVerification.styles";
 import PinInput from "../../components/PinInput/PinInput";

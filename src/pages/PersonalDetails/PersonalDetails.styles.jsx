@@ -52,8 +52,16 @@ export const Right = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  border: solid blue 1px;
   padding-bottom: 86px;
+  div.footerWrapper {
+    display: none;
+  }
+  @media (max-width: 800px) {
+    padding-bottom: 0;
+    div.footerWrapper {
+      display: block;
+    }
+  }
 `;
 
 export const RightContent = styled.div`
