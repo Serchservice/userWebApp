@@ -13,11 +13,21 @@ export const Right = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 86px;
+
+  > header {
+    display: none;
+  }
+
   div.footerWrapper {
     display: none;
   }
   @media (max-width: 800px) {
     padding-bottom: 0;
+
+    > header {
+      display: flex;
+    }
+
     div.footerWrapper {
       display: block;
     }

@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.main`
   width: 100%;
   max-width: 115rem;
-  /* max-height: 1821px; */
   display: flex;
+  flex-direction: column;
 `;
 
 export const FormContent = styled.div`
@@ -53,11 +53,21 @@ export const Right = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 86px;
+
+  > header {
+    display: none;
+  }
+
   div.footerWrapper {
     display: none;
   }
   @media (max-width: 800px) {
     padding-bottom: 0;
+
+    > header {
+      display: flex;
+    }
+
     div.footerWrapper {
       display: block;
     }

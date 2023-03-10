@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import LoginHeader from "../../components/Headers/Login/Header";
 import Footer from "../../components/Footer/Footer";
 import { Right, RightContent } from "./PersonalDetails.styles";
 import PersonalDetailsForm from "../../components/PersonalDetailsForm/PersonalDetailsForm";
@@ -19,6 +20,7 @@ const PersonalDetails = ({ stepHandler }) => {
   };
   return (
     <Right>
+      <LoginHeader />
       <RightContent>
         <PersonalDetailsForm stepHandler={stepHandler} />
       </RightContent>

@@ -1,3 +1,4 @@
+import LoginHeader from "../../components/Headers/Login/Header";
 import Footer from "../../components/Footer/Footer";
 import FormHeading, {
   MainHeading,
@@ -16,6 +17,7 @@ import PinInput from "../../components/PinInput/PinInput";
 const EmailVerifiaction = () => {
   return (
     <Right>
+      <LoginHeader />
       <RightContent>
         <form>
           <FormHeading>
